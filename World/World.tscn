@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Space_Stars2.png" type="Texture" id=2]
+[ext_resource path="res://World/earth.tscn" type="PackedScene" id=3]
 
 [node name="World" type="Node2D"]
 
@@ -9,6 +10,9 @@
 texture = ExtResource( 2 )
 offset = Vector2( 160, 90 )
 region_enabled = true
-region_rect = Rect2( 0, 0, 416, 282 )
+region_rect = Rect2( 0, 0, 671, 537 )
+
+[node name="earth" parent="." instance=ExtResource( 3 )]
+position = Vector2( 160, 88 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
