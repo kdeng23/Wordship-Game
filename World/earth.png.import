@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Space_Stars2.png-f0b31cc9b74a38d808e75e3172ec2023.stex"
+path="res://.import/earth.png-df7cd012d77a7d6982fb4e28330432e9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/Space_Stars2.png"
-dest_files=[ "res://.import/Space_Stars2.png-f0b31cc9b74a38d808e75e3172ec2023.stex" ]
+source_file="res://World/earth.png"
+dest_files=[ "res://.import/earth.png-df7cd012d77a7d6982fb4e28330432e9.stex" ]
 
 [params]
 
@@ -19,8 +19,8 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=1
-flags/filter=false
+flags/repeat=0
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=false
+detect_3d=true
 svg/scale=1.0
