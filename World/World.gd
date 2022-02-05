@@ -5,7 +5,7 @@ extends Node2D
 # var a = 2
 # var b = "text"
 
-export var websocket_url = "http://localhost:3000"
+export var websocket_url = "http://localhost:5000"
 
 var _client = WebSocketClient.new()
 
