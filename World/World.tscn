@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/Space_Stars2.png" type="Texture" id=2]
+
+[node name="World" type="Node2D"]
+
+[node name="Background" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+offset = Vector2( 160, 90 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 416, 282 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
