@@ -1,9 +1,12 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Space_Stars2.png" type="Texture" id=2]
+[ext_resource path="res://World/Wordle.gd" type="Script" id=3]
+[ext_resource path="res://World/World.gd" type="Script" id=4]
 
 [node name="World" type="Node2D"]
+script = ExtResource( 4 )
 
 [node name="Background" type="Sprite" parent="."]
 texture = ExtResource( 2 )
@@ -12,3 +15,70 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 416, 282 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
+
+[node name="Wordle" type="Node" parent="."]
+script = ExtResource( 3 )
+
+[node name="ROW 1" type="RichTextLabel" parent="Wordle"]
+margin_right = 76.0
+margin_bottom = 17.0
+bbcode_enabled = true
+bbcode_text = "[color=red]G[/color][color=red]R[/color][color=green]E[/color][color=red]E[/color][color=red]D[/color]"
+text = "GREED"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ROW 2" type="RichTextLabel" parent="Wordle"]
+margin_left = 1.0
+margin_top = 16.0
+margin_right = 76.0
+margin_bottom = 35.0
+bbcode_enabled = true
+bbcode_text = "[color=red]B[/color][color=green]L[/color][color=green]E[/color][color=green]A[/color][color=green]T[/color]"
+text = "BLEAT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ROW 3" type="RichTextLabel" parent="Wordle"]
+margin_left = 1.0
+margin_top = 31.0
+margin_right = 72.0
+margin_bottom = 47.0
+bbcode_enabled = true
+bbcode_text = "[color=red]S[/color][color=red]O[/color][color=red]U[/color][color=red]N[/color][color=red]D[/color]"
+text = "SOUND"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ROW 4" type="RichTextLabel" parent="Wordle"]
+margin_left = 1.0
+margin_top = 46.0
+margin_right = 76.0
+margin_bottom = 63.0
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ROW 5" type="RichTextLabel" parent="Wordle"]
+margin_left = 1.0
+margin_top = 62.0
+margin_right = 76.0
+margin_bottom = 79.0
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ROW 6" type="RichTextLabel" parent="Wordle"]
+margin_left = 1.0
+margin_top = 77.0
+margin_right = 76.0
+margin_bottom = 94.0
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
