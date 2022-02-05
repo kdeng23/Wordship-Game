@@ -35,6 +35,7 @@ func _connected(proto = ""):
 	# This is called on connection, "proto" will be the selected WebSocket
 	# sub-protocol (which is optional)
 	print("Connected with protocol: ", proto)
+	guessWord("TREAT")
 #	guessWord("PLEAT")
 	# You MUST always use get_peer(1).put_packet to send data to server,
 	# and not put_packet directly when not using the MultiplayerAPI.
@@ -57,6 +58,8 @@ func _on_data():
 			_guessResult(data)
 		elif event == "hotWord":
 			_handleHotword(data)
+		elif event == "victory":
+			_triggerVictory()
 		else:
 			print("Unknown event: ", event)
 			print("The unknown event's data is: ", data)
@@ -88,10 +91,14 @@ func _guessResult(word):
 func _handleHotword(word):
 	# Spawn or set the hot word the player needs to kill to win
 	print("Hot Word is ", word)
+	
+func _triggerVictory():
+	print("Player has won!")
 
 func guessWord(word):
 	# Send the word the player killed to the backend
-	var genericJSONguess = "{\"event\":\"guessResult\",\"data\":\"{word}\"}"
+	print(word)
+	var genericJSONguess = "{\"event\":\"guess\",\"data\":\"{word}\"}"
 	var formatted = genericJSONguess.format({"word": word})
 
 	_client.get_peer(1).put_packet(formatted.to_utf8())

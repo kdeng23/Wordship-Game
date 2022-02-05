@@ -27,8 +27,6 @@ script = ExtResource( 4 )
 margin_right = 76.0
 margin_bottom = 17.0
 bbcode_enabled = true
-bbcode_text = "[color=red]G[/color][color=red]R[/color][color=green]E[/color][color=red]E[/color][color=red]D[/color]"
-text = "GREED"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -39,8 +37,6 @@ margin_top = 16.0
 margin_right = 76.0
 margin_bottom = 35.0
 bbcode_enabled = true
-bbcode_text = "[color=red]B[/color][color=green]L[/color][color=green]E[/color][color=green]A[/color][color=green]T[/color]"
-text = "BLEAT"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -51,8 +47,6 @@ margin_top = 31.0
 margin_right = 72.0
 margin_bottom = 47.0
 bbcode_enabled = true
-bbcode_text = "[color=red]S[/color][color=red]O[/color][color=red]U[/color][color=red]N[/color][color=red]D[/color]"
-text = "SOUND"
 __meta__ = {
 "_edit_use_anchors_": false
 }
