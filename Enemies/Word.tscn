@@ -19,7 +19,7 @@ font_data = ExtResource( 6 )
 extents = Vector2( 20.4545, 4.54545 )
 
 [sub_resource type="CircleShape2D" id=3]
-radius = 805.76
+radius = 2075.1
 
 [sub_resource type="CircleShape2D" id=4]
 radius = 53.1507
@@ -39,14 +39,14 @@ shape = SubResource( 8 )
 one_way_collision = true
 
 [node name="TheWord" type="RichTextLabel" parent="."]
-margin_left = -125.0
+margin_left = -230.0
 margin_top = -85.0
-margin_right = 180.0
+margin_right = 285.0
 margin_bottom = 60.0
 custom_fonts/normal_font = SubResource( 5 )
 bbcode_enabled = true
-bbcode_text = "Hello"
-text = "Hello"
+bbcode_text = "[center]WOODY[/center]"
+text = "WOODY"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -66,7 +66,6 @@ scale = Vector2( 5.5, 5.5 )
 shape = SubResource( 7 )
 
 [node name="PlayerDetectionZone" parent="." instance=ExtResource( 4 )]
-visible = false
 collision_mask = 2
 
 [node name="CollisionShape2D" parent="PlayerDetectionZone" index="0"]

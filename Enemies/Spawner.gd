@@ -10,7 +10,7 @@ func spawn_enemy(word):
 	var yLoc = rand_range(0,32)
 	var xLoc = rand_range(0,570)
 	var e = enemy.instance()
-	e.addWord(word)
+	e.addWord("[center]" + word + "[/center]")
 	add_child(e)
 	e.position = Vector2(xLoc, yLoc)
 

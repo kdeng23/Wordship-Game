@@ -14,6 +14,7 @@ enum{
 
 var state = IDLE
 var velocity = Vector2.ZERO
+var lunging = false
 export var MAX_SPEED = 50
 export var ACCELERATION = 500
 export var FRICTION = 200
@@ -40,6 +41,8 @@ func _process(delta):
 	if softCollision.is_colliding():
 		velocity += softCollision.get_push_vector() * delta * 400
 	velocity = move_and_slide(velocity)
+	if !lunging:
+		_lunge()
 
 func seek_player():
 	#print('checking for player')
@@ -62,6 +65,17 @@ func _on_HitBox_area_entered(area):
 	world.guessWord(word)
 	return word
 
+func _lunge():
+	lunging = true
+	yield(get_tree().create_timer(5), "timeout") # How often the thing lunges
+	ACCELERATION = 10000
+	MAX_SPEED = 300
+	FRICTION = 20
+	yield(get_tree().create_timer(0.3), "timeout") # The lunge duration
+	lunging = false
+	MAX_SPEED = 50
+	ACCELERATION = 500
+	FRICTION = 200
 
 #func shoot():
 #	var bullet = bulletPath.instance()
