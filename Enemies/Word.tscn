@@ -19,7 +19,7 @@ font_data = ExtResource( 6 )
 extents = Vector2( 20.4545, 4.54545 )
 
 [sub_resource type="CircleShape2D" id=3]
-radius = 2075.1
+radius = 805.76
 
 [sub_resource type="CircleShape2D" id=4]
 radius = 53.1507

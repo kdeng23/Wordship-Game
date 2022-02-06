@@ -69,8 +69,13 @@ current = true
 [node name="Stats" parent="." instance=ExtResource( 3 )]
 max_health = 5
 
+[node name="Label" parent="Stats/CanvasLayer" index="0"]
+margin_left = 502.0
+margin_top = 295.0
+margin_right = 711.0
+margin_bottom = 335.0
+
 [node name="Node2D" type="Node2D" parent="."]
-visible = false
 position = Vector2( 25, 0 )
 rotation = 3.14159
 scale = Vector2( 5058.38, -1.06901 )
@@ -88,4 +93,5 @@ shape = SubResource( 6 )
 [connection signal="no_health" from="Stats" to="." method="_on_Stats_no_health"]
 [connection signal="area_entered" from="HitBox" to="." method="_on_HitBox_area_entered"]
 
+[editable path="Stats"]
 [editable path="HitBox"]

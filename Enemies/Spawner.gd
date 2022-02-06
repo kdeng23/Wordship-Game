@@ -16,7 +16,7 @@ func spawn_enemy(word):
 
 
 func _on_SpawnTime_timeout():
-	var yLoc = rand_range(0,32)
+	var yLoc = rand_range(0,29)
 	var xLoc = rand_range(0,570)
 	var e = enemy.instance()
 	e.addWord("Godot")

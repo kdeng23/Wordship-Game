@@ -15,6 +15,21 @@ script = ExtResource( 7 )
 
 [node name="Map" parent="." instance=ExtResource( 9 )]
 
+[node name="AnimatedSprite" parent="Map/Planets/Planet" index="0"]
+frame = 7
+
+[node name="AnimatedSprite" parent="Map/Planets/Planet2" index="0"]
+frame = 10
+
+[node name="AnimatedSprite" parent="Map/Planets/Planet3" index="0"]
+frame = 12
+
+[node name="AnimatedSprite" parent="Map/Planets/Planet4" index="0"]
+frame = 11
+
+[node name="AnimatedSprite" parent="Map/Planets/Planet5" index="0"]
+frame = 6
+
 [node name="Background" type="Sprite" parent="."]
 visible = false
 texture = ExtResource( 2 )
@@ -26,9 +41,10 @@ region_rect = Rect2( 0, 0, 671, 537 )
 position = Vector2( -162, -189 )
 
 [node name="earth" parent="." instance=ExtResource( 3 )]
-position = Vector2( 160, 88 )
+position = Vector2( 411, 157 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 313, 160 )
 
 [node name="Node" type="Node" parent="."]
 
@@ -46,3 +62,8 @@ script = ExtResource( 8 )
 [connection signal="dead" from="Player" to="." method="_on_Player_dead"]
 
 [editable path="Map"]
+[editable path="Map/Planets/Planet"]
+[editable path="Map/Planets/Planet2"]
+[editable path="Map/Planets/Planet3"]
+[editable path="Map/Planets/Planet4"]
+[editable path="Map/Planets/Planet5"]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://World/Space_Stars5.png" type="Texture" id=1]
 [ext_resource path="res://World/Space_Stars2.png" type="Texture" id=2]
 [ext_resource path="res://Enemies/Spawner.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World/Planet.tscn" type="PackedScene" id=4]
 
 [node name="Map" type="Node2D"]
 
@@ -22,20 +23,20 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 671, 537 )
 
 [node name="Spawner" parent="Background" instance=ExtResource( 3 )]
-position = Vector2( -175.101, -180.284 )
+position = Vector2( -176.222, -177.692 )
 scale = Vector2( 1.165, 1 )
 
 [node name="Spawner2" parent="Background" instance=ExtResource( 3 )]
-position = Vector2( -175.101, 385.618 )
+position = Vector2( -174.627, 380.36 )
 scale = Vector2( 1.165, 1 )
 
 [node name="Spawner3" parent="Background" instance=ExtResource( 3 )]
-position = Vector2( 496.18, -205.821 )
+position = Vector2( 493.855, -205.488 )
 rotation = 1.5708
 scale = Vector2( 1.025, 1 )
 
 [node name="Spawner4" parent="Background" instance=ExtResource( 3 )]
-position = Vector2( -200.219, -204.226 )
+position = Vector2( -197.297, -207.27 )
 rotation = 1.5708
 scale = Vector2( 1.025, 1 )
 
@@ -43,4 +44,49 @@ scale = Vector2( 1.025, 1 )
 collision_mask = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
-polygon = PoolVector2Array( -127, 602, -125, -224, 785, -223, 785, 602, -120, 605, -120, 621, 928, 630, 901, -318, -243, -318, -198, 636 )
+position = Vector2( 5, -8 )
+polygon = PoolVector2Array( -134, 607, -132, -230, 785, -223, 788, 610, -124, 609, -120, 621, 928, 630, 901, -318, -243, -318, -198, 636 )
+
+[node name="Planets" type="Node2D" parent="."]
+
+[node name="Planet" parent="Planets" instance=ExtResource( 4 )]
+position = Vector2( -282, -117 )
+
+[node name="AnimatedSprite" parent="Planets/Planet" index="0"]
+animation = "A"
+frame = 13
+
+[node name="Planet2" parent="Planets" instance=ExtResource( 4 )]
+position = Vector2( 492, -43 )
+
+[node name="AnimatedSprite" parent="Planets/Planet2" index="0"]
+position = Vector2( 512, 220 )
+animation = "B"
+frame = 0
+
+[node name="Planet3" parent="Planets" instance=ExtResource( 4 )]
+position = Vector2( 702, 706 )
+
+[node name="AnimatedSprite" parent="Planets/Planet3" index="0"]
+animation = "C"
+frame = 2
+
+[node name="Planet4" parent="Planets" instance=ExtResource( 4 )]
+position = Vector2( 391, 62 )
+
+[node name="AnimatedSprite" parent="Planets/Planet4" index="0"]
+position = Vector2( 66, -407 )
+animation = "D"
+frame = 1
+
+[node name="Planet5" parent="Planets" instance=ExtResource( 4 )]
+position = Vector2( -191, 661 )
+
+[node name="AnimatedSprite" parent="Planets/Planet5" index="0"]
+frame = 12
+
+[editable path="Planets/Planet"]
+[editable path="Planets/Planet2"]
+[editable path="Planets/Planet3"]
+[editable path="Planets/Planet4"]
+[editable path="Planets/Planet5"]

@@ -46,7 +46,7 @@ func move_state(delta):
 	if input_vector != Vector2.ZERO:
 		if Input.is_action_pressed("speedy"):
 			MAX_VELOCITY = 500
-			print('speedy')
+			#print('speedy')
 		else: 
 			MAX_VELOCITY = 100
 			ACCELERATION = 500
