@@ -7,7 +7,7 @@ extends Node2D
 
 #export var websocket_url = "http://localhost:5000"
 
-export var websocket_url = "https://BackEndWordShip.dulanvee.repl.co:5000"
+export var websocket_url = "https://backendwordship.herokuapp.com"
 
 const GameOverScreen = preload("res://Screens/GameOverScreen.tscn")
 
@@ -99,7 +99,7 @@ func _handleHotword(word):
 	# Spawn or set the hot word the player needs to kill to win
 	print("Hot Word is ", word)
 	print("Spawning HotWord: ", word)
-	var spawner = get_node("Background/Spawner")
+	_spawnWord(word)
 	
 func _triggerVictory():
 	print("Player has won!")
