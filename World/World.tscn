@@ -44,3 +44,5 @@ position = Vector2( 401, 117 )
 script = ExtResource( 8 )
 
 [connection signal="dead" from="Player" to="." method="_on_Player_dead"]
+
+[editable path="Map"]

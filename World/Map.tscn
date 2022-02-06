@@ -6,6 +6,13 @@
 
 [node name="Map" type="Node2D"]
 
+[node name="Wall" type="Sprite" parent="."]
+position = Vector2( 293, 202 )
+scale = Vector2( 3.02308, 1.51005 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( -1, -700, 925, 1347 )
+
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 128, 61 )
 scale = Vector2( 1.2541, 1.4013 )
@@ -23,44 +30,17 @@ position = Vector2( -175.101, 385.618 )
 scale = Vector2( 1.165, 1 )
 
 [node name="Spawner3" parent="Background" instance=ExtResource( 3 )]
-position = Vector2( 497.935, -196.19 )
+position = Vector2( 496.18, -205.821 )
 rotation = 1.5708
+scale = Vector2( 1.025, 1 )
 
 [node name="Spawner4" parent="Background" instance=ExtResource( 3 )]
-position = Vector2( -200.201, -189.641 )
+position = Vector2( -200.219, -204.226 )
 rotation = 1.5708
+scale = Vector2( 1.025, 1 )
 
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="Wall" type="Sprite" parent="Area2D"]
-position = Vector2( -225, 190 )
-scale = Vector2( 3.02308, 1.51005 )
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( -1, 0, 65, 647 )
-
-[node name="Wall2" type="Sprite" parent="Area2D"]
-position = Vector2( 882, 193 )
-scale = Vector2( 3.02308, 1.51005 )
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( -1, 0, 65, 647 )
-
-[node name="Wall3" type="Sprite" parent="Area2D"]
-position = Vector2( 337, 692 )
-rotation = 1.5708
-scale = Vector2( 3.02308, 1.51005 )
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( -1, 0, 65, 647 )
-
-[node name="Wall4" type="Sprite" parent="Area2D"]
-position = Vector2( 347, -302 )
-rotation = 1.5708
-scale = Vector2( 3.02308, 1.51005 )
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( -1, 0, 65, 647 )
+[node name="Area2D" type="StaticBody2D" parent="."]
+collision_mask = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
-polygon = PoolVector2Array( -186, -250, -210, 674, 848, 668, 878, -294, -188, -300, -190, -426, 1022, -411, 979, 815, -431, 811, -415, -426, -188, -426, -188, -300 )
+polygon = PoolVector2Array( -127, 602, -125, -224, 785, -223, 785, 602, -120, 605, -120, 621, 928, 630, 901, -318, -243, -318, -198, 636 )
