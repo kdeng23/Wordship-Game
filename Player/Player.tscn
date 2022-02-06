@@ -63,6 +63,12 @@ anims/RESET = SubResource( 4 )
 visible = false
 current = true
 
+[node name="RichTextLabel" type="RichTextLabel" parent="Camera2D"]
+margin_right = 40.0
+margin_bottom = 40.0
+bbcode_text = "Stalk"
+text = "Stalk"
+
 [node name="Stats" parent="." instance=ExtResource( 3 )]
 max_health = 5
 
@@ -73,6 +79,5 @@ scale = Vector2( 5058.38, -1.06901 )
 
 [node name="Position2D" type="Position2D" parent="Node2D"]
 rotation = 0.000827339
-scale = Vector2( 1, 1 )
 
 [node name="HitBox" parent="." instance=ExtResource( 4 )]

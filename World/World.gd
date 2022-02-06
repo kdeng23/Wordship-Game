@@ -35,7 +35,7 @@ func _connected(proto = ""):
 	# This is called on connection, "proto" will be the selected WebSocket
 	# sub-protocol (which is optional)
 	print("Connected with protocol: ", proto)
-	guessWord("TREAT")
+	startWordle()
 #	guessWord("PLEAT")
 	# You MUST always use get_peer(1).put_packet to send data to server,
 	# and not put_packet directly when not using the MultiplayerAPI.
@@ -77,13 +77,14 @@ func _process(delta):
 func _spawnWord(word):
 	# Spawn the fake word in the game
 	print("Spawning ", word)
+#	_guessResult(word)
 	
 func _guessResult(word):
 	# populate the in-game wordle with the result
 	print("Guessed ", word)
 	
 	# Find the Wordle game node
-	var wordle = get_node("Wordle")
+	var wordle = get_node("CanvasLayer/Wordle")
 	
 	# Call the addWord function
 	wordle.addWord(word)
@@ -95,10 +96,22 @@ func _handleHotword(word):
 func _triggerVictory():
 	print("Player has won!")
 
+func formatEvent(event, data):
+	var genericJSONguess = "{\"event\":\"{event}\",\"data\":\"{data}\"}"
+	return genericJSONguess.format({"event": event, "data": data})
+	
+
 func guessWord(word):
 	# Send the word the player killed to the backend
 	print(word)
-	var genericJSONguess = "{\"event\":\"guess\",\"data\":\"{word}\"}"
-	var formatted = genericJSONguess.format({"word": word})
+	var formatted = formatEvent("guess", word)
 
 	_client.get_peer(1).put_packet(formatted.to_utf8())
+
+func startWordle():
+	# Reset the Hot Word
+	var formatted = formatEvent("startGame", 1)
+
+	_client.get_peer(1).put_packet(formatted.to_utf8())
+	
+#	guessWord("TREAT")
