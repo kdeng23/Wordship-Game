@@ -15,5 +15,3 @@ offset = Vector2( -8.53333, 6.04506 )
 
 [node name="SpawnTime" type="Timer" parent="."]
 autostart = true
-
-[connection signal="timeout" from="SpawnTime" to="." method="_on_SpawnTime_timeout"]

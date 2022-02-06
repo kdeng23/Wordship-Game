@@ -21,9 +21,7 @@ func addWord(word):
 				return
 	# Kill the player otherwise since all slots have been filled
 	var player = get_node("/root/World/Player")
-	player.killPlayer()
-	var world = get_node("/root/World")
-	world.handlePlayerLoss()
+	player._on_Stats_no_health()
 	
 	
 # Called when the node enters the scene tree for the first time.
