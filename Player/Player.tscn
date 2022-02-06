@@ -67,6 +67,12 @@ anims/RESET = SubResource( 4 )
 visible = false
 current = true
 
+[node name="RichTextLabel" type="RichTextLabel" parent="Camera2D"]
+margin_right = 40.0
+margin_bottom = 40.0
+bbcode_text = "Stalk"
+text = "Stalk"
+
 [node name="Stats" parent="." instance=ExtResource( 3 )]
 max_health = 5
 
