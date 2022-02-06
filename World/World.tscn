@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Space_Stars2.png" type="Texture" id=2]
 [ext_resource path="res://Enemies/earth.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Enemies/MiniEarth.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Enemies/Spawner.tscn" type="PackedScene" id=5]
 
 [node name="World" type="Node2D"]
 
@@ -13,6 +14,9 @@ offset = Vector2( 160, 90 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 671, 537 )
 
+[node name="Spawner" parent="Background" instance=ExtResource( 5 )]
+position = Vector2( -162, -189 )
+
 [node name="earth" parent="." instance=ExtResource( 3 )]
 position = Vector2( 160, 88 )
 
@@ -21,7 +25,9 @@ position = Vector2( 160, 88 )
 [node name="Node" type="Node" parent="."]
 
 [node name="mini_earth" parent="Node" instance=ExtResource( 4 )]
-position = Vector2( 138, -66 )
+visible = false
+position = Vector2( -41, 244 )
 
 [node name="mini_earth2" parent="Node" instance=ExtResource( 4 )]
+visible = false
 position = Vector2( 401, 117 )
