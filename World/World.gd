@@ -5,7 +5,11 @@ extends Node2D
 # var a = 2
 # var b = "text"
 
-export var websocket_url = "http://localhost:5000"
+#export var websocket_url = "http://localhost:5000"
+
+export var websocket_url = "https://BackEndWordShip.dulanvee.repl.co:5000"
+
+const GameOverScreen = preload("res://Screens/GameOverScreen.tscn")
 
 var _client = WebSocketClient.new()
 
@@ -94,6 +98,8 @@ func _guessResult(word):
 func _handleHotword(word):
 	# Spawn or set the hot word the player needs to kill to win
 	print("Hot Word is ", word)
+	print("Spawning HotWord: ", word)
+	var spawner = get_node("Background/Spawner")
 	
 func _triggerVictory():
 	print("Player has won!")
@@ -119,3 +125,7 @@ func startWordle():
 	_client.get_peer(1).put_packet(formatted.to_utf8())
 	
 #	guessWord("TREAT")
+
+func handlePlayerLoss():
+	var game_over = GameOverScreen.instance()
+	add_child(game_over)

@@ -68,6 +68,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Instruction" type="RichTextLabel" parent="CanvasLayer"]
+margin_left = 79.0
+margin_top = 24.0
+margin_right = 131.0
+margin_bottom = 102.0
+bbcode_enabled = true
+bbcode_text = "Look for the secret word to win"
+text = "Look for the secret word to win"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Top Divider" type="ColorRect" parent="CanvasLayer"]
 margin_top = 13.0
 margin_right = 75.0

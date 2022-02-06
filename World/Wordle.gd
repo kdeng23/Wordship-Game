@@ -5,7 +5,6 @@ extends Node
 # var a = 2
 # var b = "text"
 
-var hotWord
 var win = false
 
 func addWord(word):
@@ -23,6 +22,8 @@ func addWord(word):
 	# Kill the player otherwise since all slots have been filled
 	var player = get_node("/root/World/Player")
 	player.killPlayer()
+	var world = get_node("/root/World")
+	world.handlePlayerLoss()
 	
 	
 # Called when the node enters the scene tree for the first time.
