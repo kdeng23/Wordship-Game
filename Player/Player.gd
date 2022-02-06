@@ -81,3 +81,6 @@ func _on_Stats_no_health():
 	scene.add_child(playerExplosion)
 	playerExplosion.global_position = global_position
 	queue_free()
+
+func killPlayer():
+	queue_free()
