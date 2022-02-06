@@ -12,7 +12,7 @@ export var websocket_url = "https://backendwordship.herokuapp.com"
 const GameOverScreen = preload("res://Screens/GameOverScreen.tscn")
 
 var _client = WebSocketClient.new()
-
+var rng = RandomNumberGenerator.new()
 func _ready():
 	# Connect base signals to get notified of connection open, close, and errors.
 	_client.connect("connection_closed", self, "_closed")
@@ -81,7 +81,9 @@ func _process(delta):
 func _spawnWord(word):
 	# Spawn the fake word in the game
 	print("Spawning ", word)
-	var spawner = get_node("Background/Spawner")
+	var spawners = get_node("Map/Background")
+	var index = rng.randi_range(0,3)
+	var spawner = spawners.get_child(index)
 	spawner.spawn_enemy(word)
 #	_guessResult(word)
 	
