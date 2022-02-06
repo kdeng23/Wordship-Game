@@ -97,6 +97,8 @@ func _handleHotword(word):
 	
 func _triggerVictory():
 	print("Player has won!")
+	var wordle = get_node("Wordle")
+	wordle.win = true
 
 func formatEvent(event, data):
 	var genericJSONguess = "{\"event\":\"{event}\",\"data\":\"{data}\"}"

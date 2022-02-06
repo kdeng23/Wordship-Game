@@ -66,3 +66,6 @@ func shoot():
 
 func _on_HitBox_area_entered(area):
 	queue_free()
+
+func killPlayer():
+	queue_free()
