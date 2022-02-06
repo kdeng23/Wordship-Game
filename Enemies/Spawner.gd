@@ -13,6 +13,7 @@ func spawn_enemy(word):
 	e.addWord("[center]" + word + "[/center]")
 	add_child(e)
 	e.position = Vector2(xLoc, yLoc)
+	$SpawnSound.play()
 
 
 func _on_SpawnTime_timeout():

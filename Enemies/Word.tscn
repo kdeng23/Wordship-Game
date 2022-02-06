@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Boxes/HitBox.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Enemies/earth.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Boxes/SoftCollision.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Enemies/COMICBD.TTF" type="DynamicFontData" id=6]
 [ext_resource path="res://Boxes/HurtBox.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Sounds/wexplode.mp3" type="AudioStream" id=8]
 
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 18.6364, 3.63636 )
@@ -83,6 +84,9 @@ shape = SubResource( 4 )
 position = Vector2( -2.50002, 1.72853e-06 )
 scale = Vector2( 0.999999, 0.999999 )
 shape = SubResource( 6 )
+
+[node name="WDeathSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 8 )
 
 [connection signal="area_entered" from="HitBox" to="." method="_on_HitBox_area_entered"]
 

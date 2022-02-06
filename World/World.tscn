@@ -16,19 +16,19 @@ script = ExtResource( 7 )
 [node name="Map" parent="." instance=ExtResource( 9 )]
 
 [node name="AnimatedSprite" parent="Map/Planets/Planet" index="0"]
-frame = 7
-
-[node name="AnimatedSprite" parent="Map/Planets/Planet2" index="0"]
-frame = 10
-
-[node name="AnimatedSprite" parent="Map/Planets/Planet3" index="0"]
-frame = 12
-
-[node name="AnimatedSprite" parent="Map/Planets/Planet4" index="0"]
 frame = 11
 
+[node name="AnimatedSprite" parent="Map/Planets/Planet2" index="0"]
+frame = 14
+
+[node name="AnimatedSprite" parent="Map/Planets/Planet3" index="0"]
+frame = 0
+
+[node name="AnimatedSprite" parent="Map/Planets/Planet4" index="0"]
+frame = 9
+
 [node name="AnimatedSprite" parent="Map/Planets/Planet5" index="0"]
-frame = 6
+frame = 10
 
 [node name="Background" type="Sprite" parent="."]
 visible = false

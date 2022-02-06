@@ -8,6 +8,7 @@ signal dead
 onready var stats = $Stats
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$soundtrack.play()
 	print(stats.health)
 	pass # Replace with function body.
 
@@ -71,6 +72,7 @@ func shoot():
 
 func _on_HitBox_area_entered(area):
 	#knockback = area.knockback_vector * 120
+	$HitSound.play()
 	stats.set_health(stats.health - 1)
 	print(stats.health)
 
@@ -80,8 +82,11 @@ func _on_Stats_no_health():
 	var scene = get_tree().current_scene
 	scene.add_child(playerExplosion)
 	playerExplosion.global_position = global_position
+	$DeathSound.play()
+	$soundtrack.stop()
 	emit_signal("dead")
 	$Sprite.hide()
+	$deathtrack.play()
 	yield(get_tree().create_timer(1.0), "timeout")
 	killPlayer()
 

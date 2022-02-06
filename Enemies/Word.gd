@@ -54,12 +54,15 @@ func seek_player():
 
 func _on_HitBox_area_entered(area):
 	print('collide')
+	$WDeathSound.play()
 	var word = $TheWord.bbcode_text
 	var WordExplosion = load("res://Explosions/WordExplosion.tscn")
 	var wordExplosion = WordExplosion.instance()
 	var scene = get_tree().current_scene
 	scene.add_child(wordExplosion)
 	wordExplosion.global_position = global_position
+	#print("death")
+	yield(get_tree().create_timer(0.6), "timeout")
 	queue_free()
 	var world = get_node("/root/World")
 	world.guessWord(word)

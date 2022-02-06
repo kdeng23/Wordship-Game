@@ -27,8 +27,9 @@ position = Vector2( -176.222, -177.692 )
 scale = Vector2( 1.165, 1 )
 
 [node name="Spawner2" parent="Background" instance=ExtResource( 3 )]
-position = Vector2( -174.627, 380.36 )
-scale = Vector2( 1.165, 1 )
+position = Vector2( 493.582, 358.238 )
+rotation = 3.14159
+scale = Vector2( 1.16365, 0.966876 )
 
 [node name="Spawner3" parent="Background" instance=ExtResource( 3 )]
 position = Vector2( 493.855, -205.488 )
@@ -54,7 +55,7 @@ position = Vector2( -282, -117 )
 
 [node name="AnimatedSprite" parent="Planets/Planet" index="0"]
 animation = "A"
-frame = 13
+frame = 10
 
 [node name="Planet2" parent="Planets" instance=ExtResource( 4 )]
 position = Vector2( 492, -43 )
@@ -62,14 +63,14 @@ position = Vector2( 492, -43 )
 [node name="AnimatedSprite" parent="Planets/Planet2" index="0"]
 position = Vector2( 512, 220 )
 animation = "B"
-frame = 0
+frame = 13
 
 [node name="Planet3" parent="Planets" instance=ExtResource( 4 )]
 position = Vector2( 702, 706 )
 
 [node name="AnimatedSprite" parent="Planets/Planet3" index="0"]
 animation = "C"
-frame = 2
+frame = 15
 
 [node name="Planet4" parent="Planets" instance=ExtResource( 4 )]
 position = Vector2( 391, 62 )
@@ -77,13 +78,13 @@ position = Vector2( 391, 62 )
 [node name="AnimatedSprite" parent="Planets/Planet4" index="0"]
 position = Vector2( 66, -407 )
 animation = "D"
-frame = 1
+frame = 8
 
 [node name="Planet5" parent="Planets" instance=ExtResource( 4 )]
 position = Vector2( -191, 661 )
 
 [node name="AnimatedSprite" parent="Planets/Planet5" index="0"]
-frame = 12
+frame = 9
 
 [editable path="Planets/Planet"]
 [editable path="Planets/Planet2"]
