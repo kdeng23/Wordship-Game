@@ -4,7 +4,7 @@ extends KinematicBody2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-
+signal dead
 onready var stats = $Stats
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -80,7 +80,10 @@ func _on_Stats_no_health():
 	var scene = get_tree().current_scene
 	scene.add_child(playerExplosion)
 	playerExplosion.global_position = global_position
-	queue_free()
+	emit_signal("dead")
+	$Sprite.hide()
+	yield(get_tree().create_timer(1.0), "timeout")
+	killPlayer()
 
 func killPlayer():
 	queue_free()

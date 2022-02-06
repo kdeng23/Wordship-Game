@@ -64,7 +64,6 @@ anims/Idle = SubResource( 3 )
 anims/RESET = SubResource( 4 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-visible = false
 current = true
 
 [node name="Stats" parent="." instance=ExtResource( 3 )]

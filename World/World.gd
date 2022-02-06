@@ -126,6 +126,7 @@ func startWordle():
 	
 #	guessWord("TREAT")
 
-func handlePlayerLoss():
+func _on_Player_dead():
+	yield(get_tree().create_timer(1.0), "timeout")
 	var game_over = GameOverScreen.instance()
 	add_child(game_over)
