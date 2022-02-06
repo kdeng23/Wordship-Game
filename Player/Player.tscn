@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Player/Emissary.png" type="Texture" id=1]
 [ext_resource path="res://Player/Player.gd" type="Script" id=2]
@@ -43,7 +43,11 @@ tracks/0/keys = {
 "values": [ 0 ]
 }
 
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 12.5, 17.5 )
+
 [node name="Player" type="KinematicBody2D"]
+collision_layer = 2
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -81,3 +85,11 @@ scale = Vector2( 5058.38, -1.06901 )
 rotation = 0.000827339
 
 [node name="HitBox" parent="." instance=ExtResource( 4 )]
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2( -2.5, -0.5 )
+shape = SubResource( 6 )
+
+[connection signal="area_entered" from="HitBox" to="." method="_on_HitBox_area_entered"]
+
+[editable path="HitBox"]
