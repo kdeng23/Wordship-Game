@@ -53,6 +53,8 @@ func _on_HitBox_area_entered(area):
 	print('collide')
 	var word = $TheWord.bbcode_text
 	queue_free()
+	var world = get_node("/root/World")
+	world.guessWord(word)
 	return word
 
 

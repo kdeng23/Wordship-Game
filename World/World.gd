@@ -77,6 +77,8 @@ func _process(delta):
 func _spawnWord(word):
 	# Spawn the fake word in the game
 	print("Spawning ", word)
+	var spawner = get_node("Background/Spawner")
+	spawner.spawn_enemy(word)
 #	_guessResult(word)
 	
 func _guessResult(word):
@@ -84,7 +86,7 @@ func _guessResult(word):
 	print("Guessed ", word)
 	
 	# Find the Wordle game node
-	var wordle = get_node("CanvasLayer/Wordle")
+	var wordle = get_node("Wordle")
 	
 	# Call the addWord function
 	wordle.addWord(word)

@@ -6,7 +6,8 @@ extends Node
 # var b = "text"
 
 func addWord(word):
-	for child in self.get_children():
+	var wordle = get_node("CanvasLayer")
+	for child in wordle.get_children():
 		if child is RichTextLabel:
 			if child.bbcode_text == "":
 				child.set_bbcode(word)
