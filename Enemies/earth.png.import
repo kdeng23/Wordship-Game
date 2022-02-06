@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/earth.png-df7cd012d77a7d6982fb4e28330432e9.stex"
+path="res://.import/earth.png-cb965e33e200bd70f8a947c63820e2b5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/earth.png"
-dest_files=[ "res://.import/earth.png-df7cd012d77a7d6982fb4e28330432e9.stex" ]
+source_file="res://Enemies/earth.png"
+dest_files=[ "res://.import/earth.png-cb965e33e200bd70f8a947c63820e2b5.stex" ]
 
 [params]
 

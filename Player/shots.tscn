@@ -55,6 +55,8 @@ extents = Vector2( 6, 2.5 )
 
 [node name="Bullets" type="KinematicBody2D"]
 scale = Vector2( 2, 2 )
+collision_layer = 0
+collision_mask = 0
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
@@ -76,6 +78,7 @@ shape = SubResource( 9 )
 wait_time = 0.5
 
 [node name="HurtBox" parent="." instance=ExtResource( 3 )]
+collision_mask = 8
 
 [node name="CollisionShape2D" parent="HurtBox" index="0"]
 shape = SubResource( 10 )
